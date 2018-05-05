@@ -4,13 +4,15 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var tableArray = require('./tables.js');
 
+var apiRoutes = require('./routes/apiRoutes.js');
 var htmlRoutes = require('./routes/htmlRoutes.js');
 
 var app = express();
 var PORT = process.env.PORT || 3000;
 
-//Routes of html 
-htmlRoutes(app)
+//Routes of html
+apiRoutes(app);
+htmlRoutes(app);
 
 //Routes of api
 
