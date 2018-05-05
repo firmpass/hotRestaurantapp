@@ -19,6 +19,8 @@
   "homepage": "https://github.com/firmpass/hotRestaurantapp#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "express": "^4.16.3"
+    "chalk": "^2.4.1",
+    "express": "^4.16.3",
+    "nodemon": "^1.17.3"
   }
 }
