@@ -11,6 +11,9 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 
 //Routes of html
+// missing var bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 apiRoutes(app);
 htmlRoutes(app);
 
