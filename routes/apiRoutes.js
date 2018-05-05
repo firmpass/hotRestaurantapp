@@ -1,20 +1,17 @@
 
-var path = require('path');
+var tableArray = require('../tables.js');
 //HTML ROUTES
 
 
 module.exports = function (app) {
     
 // Basic route that sends the user first to the AJAX Page
-app.get("/tables", function(req, res) {
-    res.sendFile(path.join(__dirname, "tables.html"));
+app.get("/api/tables", function(req, res) {
+   res.json(tableArray);
+   console.log(tableArray);
+   console.log("Table hit");
 });
 
-app.get("/reserve", function(req, res) {
-    res.sendFile(path.join(__dirname, "reserve.html"));
-});
-//home page route
-app.get("*", function(req, res) {
-    res.sendFile(path.join(__dirname, "home.html"));    
-});
+
+
 }

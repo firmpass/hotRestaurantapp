@@ -15,6 +15,6 @@ app.get("/reserve", function(req, res) {
 });
 //home page route
 app.get("*", function(req, res) {
-    res.sendFile(path.join(__dirname, "../home.html"));    
-});
+        res.sendFile(path.join(__dirname, "../home.html"));
+    });
 }
